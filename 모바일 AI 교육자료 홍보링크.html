@@ -56,7 +56,7 @@
     <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="text-lg font-bold text-stone-800 shrink-0">
-                <a href="#hero">수업 변화를 위한 제안</a>
+                <a href="#hero">정보 수업 변화를 위한 제안</a>
             </div>
             <div class="hidden md:flex items-center space-x-6 text-sm">
                 <a href="#challenge" class="nav-link text-stone-600 hover:text-blue-500">수업의 고민</a>
@@ -185,48 +185,53 @@
         <section id="features" class="py-16 md:py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-2xl md:text-3xl font-bold text-stone-800">AI 교육자료, 이렇게 수업을 바꿉니다</h2>
-                    <p class="mt-2 text-base md:text-lg text-stone-600">AI 교육자료가 실제 수업에서 어떻게 작동하는지 체험해볼 수 있습니다.</p>
-                </div>
-
-                <div class="max-w-5xl mx-auto">
-                    <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 text-sm">
-                        <button class="tab active" data-tab="tab1">🎯 맞춤학습</button>
-                        <button class="tab" data-tab="tab2">🔄 자동 피드백</button>
-                        <button class="tab" data-tab="tab3">🎮 흥미로운 학습</button>
-                        <button class="tab" data-tab="tab4">👨‍🏫 학습 모니터링</button>
-                        <button class="tab" data-tab="tab5">🤖 AI 챗봇</button>
+                            <h2 class="text-2xl md:text-3xl font-bold text-stone-800">AI 교육자료, 이렇게 수업을 바꿉니다</h2>
+                            <p class="mt-2 text-base md:text-lg text-stone-600">AI 교육자료가 실제 수업에서 어떻게 작동하는지 체험해볼 수 있습니다.</p>
+                        </div>
+        
+                        <div class="max-w-5xl mx-auto">
+                            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 text-sm">
+                                <button class="tab active" data-tab="tab1">🎯 맞춤학습</button>
+                                <button class="tab" data-tab="tab2">🔄 자동 피드백</button>
+                                <button class="tab" data-tab="tab3">🎮 게임형 학습</button>
+                                <button class="tab" data-tab="tab4">🤝 협업 코딩</button>
+                                <button class="tab" data-tab="tab5">👨‍🏫 인솔 모드</button>
+                                <button class="tab" data-tab="tab6">🤖 실습 코칭</button>
+                            </div>
+        
+                            <div id="tab-content" class="bg-white p-6 md:p-8 rounded-xl shadow-lg min-h-[280px]">
+                                <div id="tab1" class="tab-pane active">
+                                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">진단평가 & 수준별 콘텐츠</h3>
+                                    <p class="text-stone-600 text-sm md:text-base">수업 시작 전 간단한 진단평가로 학생 이해도를 파악하고, AI가 분석하여 각 학생에게 필요한 보충, 심화 과제를 자동으로 추천합니다.</p>
+                                </div>
+                                <div id="tab2" class="tab-pane hidden">
+                                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">자동 피드백 & 오답 노트</h3>
+                                    <p class="text-stone-600 text-sm md:text-base">학생이 코드를 제출하면 AI가 즉시 채점하고 실시간 피드백을 제공합니다. 문법 오류, 논리적 실수 등을 구체적으로 짚어줍니다.</p>
+                                </div>
+                                <div id="tab3" class="tab-pane hidden">
+                                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">게임형 학습 콘텐츠</h3>
+                                    <p class="text-stone-600 text-sm md:text-base">드래그 앤 드롭으로 코드 블록을 맞추거나, 순서도를 완성하는 등 게임처럼 즐기는 학습 활동으로 학생들의 몰입감을 높입니다.</p>
+                                </div>
+                                <div id="tab4" class="tab-pane hidden">
+                                   <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">함께 코딩 & 모둠 활동 지원</h3>
+                                    <p class="text-stone-600 text-sm md:text-base">여러 학생이 하나의 코드 파일을 동시에 편집하며 협업하고, 교사는 모둠별 프로젝트 진행 상황을 실시간으로 확인할 수 있습니다.</p>
+                                </div>
+                                <div id="tab5" class="tab-pane hidden">
+                                   <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">인솔 모드: 교사 주도 실시간 활동</h3>
+                                    <p class="text-stone-600 text-sm md:text-base">교사가 전체 학생의 화면을 제어하며 수업을 이끌어갑니다. 복잡한 개념을 설명하거나 모두의 학습 흐름을 맞춰야 할 때 효과적입니다.</p>
+                                </div>
+                                <div id="tab6" class="tab-pane hidden">
+                                   <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">실습 코칭 모드: AI 페어 프로그래머</h3>
+                                    <p class="text-stone-600 text-sm md:text-base">'함께 코딩' 중 막히는 부분이 생겼을 때, AI 코치가 정답 대신 문제 해결에 필요한 힌트를 주어 자기주도적 학습을 돕습니다.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div id="tab-content" class="bg-white p-6 md:p-8 rounded-xl shadow-lg min-h-[280px]">
-                        <div id="tab1" class="tab-pane active">
-                            <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">진단평가 & 수준별 콘텐츠</h3>
-                            <p class="text-stone-600 text-sm md:text-base">수업 시작 전 진단평가로 학생의 사전 지식을 확인하고, AI가 빠른 학습자, 보통 학습자, 느린 학습자로 분류하여 그에 맞는 맞춤형 콘텐츠를 제공합니다.</p>
-                        </div>
-                        <div id="tab2" class="tab-pane hidden">
-                            <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">자동 채점 & 즉각적인 피드백</h3>
-                            <p class="text-stone-600 text-sm md:text-base">학생이 과제를 제출하면 AI가 자동으로 채점하고 평가 결과를 분석해 시간을 절약합니다. 교사와 학생 간의 상호작용을 통해 실시간으로 이해도를 확인하고 즉각적인 피드백을 줄 수 있습니다.</p>
-                        </div>
-                        <div id="tab3" class="tab-pane hidden">
-                            <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">게임형 학습 & 실습 콘텐츠</h3>
-                            <p class="text-stone-600 text-sm md:text-base">다양한 영상, 게임형 콘텐츠로 학생들의 흥미를 유발하고, 배운 내용을 바로 적용할 수 있는 다채로운 코딩 실습 콘텐츠를 제공하여 수업 몰입도를 높입니다.</p>
-                        </div>
-                        <div id="tab4" class="tab-pane hidden">
-                           <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">인솔 모드 & 학습 현황 확인</h3>
-                            <p class="text-stone-600 text-sm md:text-base">인솔 모드를 통해 교사가 전체 학생의 화면을 제어하며 수업을 이끌어갈 수 있습니다. 또한, 학생들이 어떤 콘텐츠를 학습하는지 실시간으로 파악할 수 있습니다.</p>
-                        </div>
-                        <div id="tab5" class="tab-pane hidden">
-                           <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">AI 챗봇을 통한 궁금증 해결</h3>
-                            <p class="text-stone-600 text-sm md:text-base">학생이 학습 중 궁금한 점이 생겼을 때, AI 챗봇을 통해 즉시 질문하고 해결할 수 있어 자기주도적 학습을 돕습니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="impact" class="py-16 md:py-20 bg-stone-100">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
+                </section>
+        
+                <section id="impact" class="py-16 md:py-20 bg-stone-100">
+                    <div class="container mx-auto px-6">
+                        <div class="text-center mb-12">
                     <h2 class="text-2xl md:text-3xl font-bold text-stone-800">교과서와 AI의 결합이 가져오는 <span class="text-blue-500">긍정적 효과</span></h2>
                     <p class="mt-2 text-base md:text-lg text-stone-600">AI 기술 도입은 학생과 교사 모두에게 의미 있는 변화를 만듭니다.</p>
                 </div>
