@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>씨마스 정보 AI교육자료 안내</title>
+    <meta property="og:title" content="씨마스 정보 AI교육자료 안내">
+    <meta property="og:description" content="수업 효과를 두 배로 만드는 시너지, 직접 체험해보세요.">
+    <meta property="og:image" content="thumbnail.png">
+    <meta property="og:url" content="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #fdfcfb;
+            color: #4a4a4a;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .nav-link {
+            transition: all 0.3s;
+        }
+        .nav-link.active {
+            color: #3b82f6;
+            font-weight: 700;
+        }
+        .tab.active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        .thumbnail-img {
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-stone-50">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-lg font-bold text-stone-800 shrink-0">
+                <a href="#hero">수업 변화를 위한 제안</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm">
+                <a href="#challenge" class="nav-link text-stone-600 hover:text-blue-500">수업의 고민</a>
+                <a href="#solution" class="nav-link text-stone-600 hover:text-blue-500">새로운 해법</a>
+                <a href="#features" class="nav-link text-stone-600 hover:text-blue-500">AI 기능</a>
+                <a href="#impact" class="nav-link text-stone-600 hover:text-blue-500">수업의 변화</a>
+                <a href="#experience" class="nav-link text-white bg-blue-500 px-3 py-2 rounded-md hover:bg-blue-600">체험관 바로가기</a>
+            </div>
+            <div class="md:hidden">
+                <a href="#experience" class="nav-link text-white bg-blue-500 px-3 py-2 rounded-md text-sm">체험관</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-white pt-20 pb-16 md:pt-28 md:pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-5xl font-bold text-stone-800 leading-tight">
+                    <span class="text-blue-500">씨마스 정보 교과서 × AI 교육자료</span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-stone-600">수업 효과를 두 배로 만드는 시너지</p>
+                
+                <div class="max-w-2xl mx-auto p-6 bg-stone-50 rounded-xl shadow mt-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfth1YjyTEhykqcFiJ5QGDayMyPkeSrllM3dNN2bhjXkAsPag/viewform" target="_blank" class="block w-full bg-red-500 text-white text-center font-bold py-3 px-4 rounded-lg shadow-md hover:bg-red-600 transition-colors">
+                            AI 교육자료 상담 신청
+                        </a>
+                        <div class="relative">
+                            <button id="s2b-button" class="w-full bg-teal-500 text-white text-center font-bold py-3 px-4 rounded-lg shadow-md hover:bg-teal-600 transition-colors flex items-center justify-center">
+                                <span>학교장터 바로가기</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div id="s2b-dropdown" class="hidden absolute w-full mt-2 bg-white rounded-lg shadow-xl z-10">
+                                <a href="https://www.s2b.kr/Edutech/product/productDetail.do?estimatecode=202508284260589#tab2" target="_blank" class="block px-4 py-3 text-stone-700 hover:bg-stone-100 rounded-t-lg">초등 정보</a>
+                                <a href="https://www.s2b.kr/Edutech/product/productDetail.do?estimatecode=202508264201044" target="_blank" class="block px-4 py-3 text-stone-700 hover:bg-stone-100">중학 정보</a>
+                                <a href="https://www.s2b.kr/Edutech/product/productDetail.do?estimatecode=202508264194534" target="_blank" class="block px-4 py-3 text-stone-700 hover:bg-stone-100 rounded-b-lg">고등 정보</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-stone-800">정보 AI 교육자료, <span class="text-blue-500">직접 체험해보세요</span></h2>
+                    <p class="mt-2 text-base md:text-lg text-stone-600">아래에서 학교급에 맞는 체험관을 바로 경험하실 수 있습니다.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                    <a href="https://viewer.cmass.kr/html/aidt/aidt_e/view_aidt_e.html" target="_blank" class="relative block rounded-2xl shadow-lg overflow-hidden p-8 h-96 flex flex-col justify-center items-center text-white text-center bg-gradient-to-br from-yellow-400 to-orange-500 transition-transform duration-300 hover:-translate-y-2 group">
+                        <div class="absolute -top-16 -left-16 w-48 h-48 bg-white/10 rounded-full"></div>
+                        <div class="absolute -bottom-24 -right-10 w-48 h-48 bg-white/10 rounded-full"></div>
+                        <h3 class="text-4xl font-bold z-10">초등 정보</h3>
+                        <div class="mt-4 z-10 bg-white/90 text-orange-500 font-semibold px-5 py-2 rounded-full shadow-sm group-hover:bg-white transition-colors">
+                            보러가기 &rarr;
+                        </div>
+                    </a>
+                    <a href="https://viewer.cmass.kr/html/aidt/aidt_m/view_aidt_m.html" target="_blank" class="relative block rounded-2xl shadow-lg overflow-hidden p-8 h-96 flex flex-col justify-center items-center text-white text-center bg-gradient-to-br from-teal-400 to-cyan-500 transition-transform duration-300 hover:-translate-y-2 group">
+                        <div class="absolute -top-10 -right-20 w-48 h-48 bg-white/10 rounded-xl transform rotate-45"></div>
+                        <div class="absolute -bottom-12 -left-12 w-40 h-40 bg-white/10 rounded-xl transform rotate-12"></div>
+                        <h3 class="text-4xl font-bold z-10">중학 정보</h3>
+                        <div class="mt-4 z-10 bg-white/90 text-teal-500 font-semibold px-5 py-2 rounded-full shadow-sm group-hover:bg-white transition-colors">
+                            보러가기 &rarr;
+                        </div>
+                    </a>
+                    <a href="https://viewer.cmass.kr/html/aidt/aidt_h/view_aidt_h.html" target="_blank" class="relative block rounded-2xl shadow-lg overflow-hidden p-8 h-96 flex flex-col justify-center items-center text-white text-center bg-gradient-to-br from-purple-500 to-fuchsia-600 transition-transform duration-300 hover:-translate-y-2 group">
+                        <div class="absolute top-0 -left-10 w-48 h-96 bg-white/10 rounded-full transform -rotate-45"></div>
+                        <div class="absolute -bottom-24 right-0 w-48 h-48 bg-white/5 rounded-full"></div>
+                        <h3 class="text-4xl font-bold z-10">고등 정보</h3>
+                        <div class="mt-4 z-10 bg-white/90 text-purple-600 font-semibold px-5 py-2 rounded-full shadow-sm group-hover:bg-white transition-colors">
+                            보러가기 &rarr;
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="challenge" class="py-16 md:py-20 bg-stone-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-stone-800">"정보 수업, 이런 점이 고민이셨나요?"</h2>
+                    <p class="mt-2 text-base md:text-lg text-stone-600">씨마스가 선생님과 학생들의 목소리에 귀 기울였습니다.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="text-4xl md:text-5xl mb-4">🏃‍♂️..🚶‍♀️</div>
+                        <h3 class="text-lg md:text-xl font-bold mb-2">맞춤형 수업의 어려움</h3>
+                        <p class="text-stone-600 text-sm md:text-base">학생마다 이해 속도가 달라 수준별 수업을 진행하기 어렵고, 저마다의 수준에 맞는 학습 자료를 원하는 학생들의 요구를 모두 충족시키기 힘듭니다.</p>
+                    </div>
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="text-4xl md:text-5xl mb-4">📉</div>
+                        <h3 class="text-lg md:text-xl font-bold mb-2">수업 자료의 부재</h3>
+                        <p class="text-stone-600 text-sm md:text-base">정보 교과 내용을 학생들이 더 쉽고 재미있게 이해하도록 도울 자료가 부족합니다. 학급 분위기에 맞춰 수업을 다채롭게 구성하고 싶어도 활용할 자료가 마땅치 않습니다.</p>
+                    </div>
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="text-4xl md:text-5xl mb-4">💬🤫</div>
+                        <h3 class="text-lg md:text-xl font-bold mb-2">소극적인 학생 참여</h3>
+                        <p class="text-stone-600 text-sm md:text-base">수업 중 궁금한 내용이 있어도 선뜻 질문하지 못하는 학생들이 많습니다. 교사가 모든 학생의 이해도를 실시간으로 파악하고 즉각적인 피드백을 주기도 어렵습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="solution" class="py-16 md:py-20 bg-blue-50/50">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-stone-800">이 문제, <span class="text-blue-500">씨마스 AI 교육자료</span>가 해결합니다</h2>
+                    <p class="mt-2 text-base md:text-lg text-stone-600">교과서의 장점은 살리고, 현실의 한계는 AI 기술로 극복합니다.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center bg-white p-8 md:p-10 rounded-xl shadow-lg">
+                    <div class="text-center border-r-0 md:border-r md:pr-8 border-stone-200">
+                        <div class="text-5xl md:text-6xl mb-4">📖</div>
+                        <h3 class="text-xl md:text-2xl font-bold text-stone-800">교과서: 튼튼한 뼈대</h3>
+                        <p class="mt-2 text-stone-600">교육과정에 기반한 탄탄한 개념, 체계적인 활동, 깊이 있는 프로젝트를 제공하여 학습의 중심을 잡아줍니다.</p>
+                    </div>
+                    <div class="text-center mt-8 md:mt-0">
+                         <div class="text-5xl md:text-6xl mb-4">💡</div>
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-500">AI: 똑똑한 조력자</h3>
+                        <p class="mt-2 text-stone-600">자동화된 평가와 맞춤형 콘텐츠로 학생 참여를 유도하고, 교사의 업무 부담을 줄여 수업에 활력을 불어넣는 든든한 조력자가 되어 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-stone-800">AI 교육자료, 이렇게 수업을 바꿉니다</h2>
+                    <p class="mt-2 text-base md:text-lg text-stone-600">AI 교육자료가 실제 수업에서 어떻게 작동하는지 체험해볼 수 있습니다.</p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 text-sm">
+                        <button class="tab active" data-tab="tab1">🎯 맞춤학습</button>
+                        <button class="tab" data-tab="tab2">🔄 자동 피드백</button>
+                        <button class="tab" data-tab="tab3">🎮 흥미로운 학습</button>
+                        <button class="tab" data-tab="tab4">👨‍🏫 학습 모니터링</button>
+                        <button class="tab" data-tab="tab5">🤖 AI 챗봇</button>
+                    </div>
+
+                    <div id="tab-content" class="bg-white p-6 md:p-8 rounded-xl shadow-lg min-h-[280px]">
+                        <div id="tab1" class="tab-pane active">
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">진단평가 & 수준별 콘텐츠</h3>
+                            <p class="text-stone-600 text-sm md:text-base">수업 시작 전 진단평가로 학생의 사전 지식을 확인하고, AI가 빠른 학습자, 보통 학습자, 느린 학습자로 분류하여 그에 맞는 맞춤형 콘텐츠를 제공합니다.</p>
+                        </div>
+                        <div id="tab2" class="tab-pane hidden">
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">자동 채점 & 즉각적인 피드백</h3>
+                            <p class="text-stone-600 text-sm md:text-base">학생이 과제를 제출하면 AI가 자동으로 채점하고 평가 결과를 분석해 시간을 절약합니다. 교사와 학생 간의 상호작용을 통해 실시간으로 이해도를 확인하고 즉각적인 피드백을 줄 수 있습니다.</p>
+                        </div>
+                        <div id="tab3" class="tab-pane hidden">
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">게임형 학습 & 실습 콘텐츠</h3>
+                            <p class="text-stone-600 text-sm md:text-base">다양한 영상, 게임형 콘텐츠로 학생들의 흥미를 유발하고, 배운 내용을 바로 적용할 수 있는 다채로운 코딩 실습 콘텐츠를 제공하여 수업 몰입도를 높입니다.</p>
+                        </div>
+                        <div id="tab4" class="tab-pane hidden">
+                           <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">인솔 모드 & 학습 현황 확인</h3>
+                            <p class="text-stone-600 text-sm md:text-base">인솔 모드를 통해 교사가 전체 학생의 화면을 제어하며 수업을 이끌어갈 수 있습니다. 또한, 학생들이 어떤 콘텐츠를 학습하는지 실시간으로 파악할 수 있습니다.</p>
+                        </div>
+                        <div id="tab5" class="tab-pane hidden">
+                           <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">AI 챗봇을 통한 궁금증 해결</h3>
+                            <p class="text-stone-600 text-sm md:text-base">학생이 학습 중 궁금한 점이 생겼을 때, AI 챗봇을 통해 즉시 질문하고 해결할 수 있어 자기주도적 학습을 돕습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="py-16 md:py-20 bg-stone-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-stone-800">교과서와 AI의 결합이 가져오는 <span class="text-blue-500">긍정적 효과</span></h2>
+                    <p class="mt-2 text-base md:text-lg text-stone-600">AI 기술 도입은 학생과 교사 모두에게 의미 있는 변화를 만듭니다.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                        <h3 class="text-lg md:text-xl font-bold text-center mb-4">학생 참여도 및 이해도 변화</h3>
+                        <div class="chart-container">
+                            <canvas id="studentImpactChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                        <h3 class="text-lg md:text-xl font-bold text-center mb-4">교사 시간 활용 변화</h3>
+                        <div class="chart-container">
+                            <canvas id="teacherImpactChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary" class="py-16 md:py-20 bg-stone-100">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-2xl md:text-4xl font-bold text-stone-800 leading-tight">
+                        씨마스 교과서에 AI를 더하면,<br>
+                        <span class="text-blue-500">학생은 더 집중</span>하고, <span class="text-blue-500">교사는 더 여유</span>로워집니다.
+                    </h2>
+                    <p class="mt-6 text-base md:text-lg text-stone-600">
+                        교과서의 깊이와 AI의 스마트함이 만나 최적의 수업 환경을 만듭니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-stone-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 C-MASS. 이 자료는 씨마스에서 제작되었습니다.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 학교장터 드롭다운 메뉴
+            const s2bButton = document.getElementById('s2b-button');
+            const s2bDropdown = document.getElementById('s2b-dropdown');
+            s2bButton.addEventListener('click', () => {
+                s2bDropdown.classList.toggle('hidden');
+            });
+            // 다른 곳 클릭 시 드롭다운 닫기
+            window.addEventListener('click', function(e) {
+                if (!s2bButton.contains(e.target)) {
+                    s2bDropdown.classList.add('hidden');
+                }
+            });
+
+            Chart.register(ChartDataLabels);
+
+            const studentCtx = document.getElementById('studentImpactChart').getContext('2d');
+            new Chart(studentCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['적극적 참여', '보통', '소극적 참여'],
+                    datasets: [{ data: [75, 20, 5], backgroundColor: ['#3B82F6', '#93C5FD', '#E0E7FF'], borderWidth: 2, borderColor: '#fdfcfb' }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 20 } },
+                        tooltip: { callbacks: { label: (c) => `${c.label}: ${c.raw}%` } },
+                        datalabels: {
+                            formatter: (v) => v > 5 ? v + '%' : '',
+                            color: '#fff', font: { weight: 'bold' }
+                        }
+                    }
+                }
+            });
+
+            const teacherCtx = document.getElementById('teacherImpactChart').getContext('2d');
+            new Chart(teacherCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['단순 반복 업무', '수업 연구/상담'],
+                    datasets: [
+                        { label: 'AI 도입 전', data: [65, 35], backgroundColor: '#9CA3AF' },
+                        { label: 'AI 도입 후', data: [20, 80], backgroundColor: '#60A5FA' }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, max: 100, ticks: { callback: (v) => v + '%' } } },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 20 } },
+                        tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.raw}%` } },
+                        datalabels: {
+                            formatter: (v) => v + '%',
+                            anchor: 'end', align: 'top', color: '#475569', font: { weight: 'bold' }
+                        }
+                    }
+                }
+            });
+
+            const tabs = document.querySelectorAll('.tab');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.dataset.tab;
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    tabPanes.forEach(pane => {
+                        if (pane.id === target) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.add('hidden');
+                            pane.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            // 초기 탭 상태 설정
+            tabPanes.forEach(pane => {
+                if (!pane.classList.contains('active')) {
+                    pane.classList.add('hidden');
+                }
+            });
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main > section');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 80) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
